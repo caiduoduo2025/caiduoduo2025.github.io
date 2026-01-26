@@ -7,7 +7,6 @@
 /* ==========================================================================
    1. 顶部导航栏 (VPNav) - 负责 T 形的“横”
    ========================================================================== */
-/* 将边框统一加在最外层的 VPNav 上，确保是一条完整的直线 */
 .VPNav {
   position: fixed !important;
   top: 0;
@@ -16,40 +15,66 @@
   z-index: 100 !important;
   background-color: #ffffff !important;
   backdrop-filter: none !important;
-  /* 唯一的底部横线 */
+  /* 底部横线 */
   border-bottom: 1px solid var(--vp-c-divider) !important;
+  box-shadow: none !important;
+  height: var(--vp-nav-height) !important;
+}
+
+/* 移除子元素的边框和背景 */
+.VPNavBar, .VPLocalNav {
+  border-bottom: none !important;
+  background-color: transparent !important;
   box-shadow: none !important;
 }
 
-/* 移除子元素的边框，防止出现“双眼皮” */
-.VPNavBar {
-  border-bottom: none !important;
-  background-color: transparent !important;
-}
-.VPLocalNav {
-  border-bottom: none !important;
-  background-color: transparent !important;
+/* 隐藏 curtain */
+.VPSidebar .curtain {
+  display: none !important;
 }
 
 /* ==========================================================================
-   2. 侧边栏 (Sidebar) - 负责 T 形的“竖”
+   2. 导航高亮条 (Active Link Indicator)
+   ========================================================================== */
+/* 针对激活状态的导航链接，添加底部高亮条 */
+.VPNavBarMenuLink.active {
+  /* 确保高亮条位于横线之上 */
+  position: relative;
+}
+
+.VPNavBarMenuLink.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; /* 向下偏移 1px，正好覆盖在 VPNav 的横线上 */
+  left: 12px;   /* 左右留白，根据实际 padding 调整 */
+  right: 12px;
+  height: 2px;  /* 高亮条厚度 */
+  background-color: var(--vp-c-brand); /* 使用品牌色 */
+  z-index: 101; /* 确保在横线之上 */
+  display: block;
+}
+
+/* ==========================================================================
+   3. 侧边栏 (Sidebar) - 负责 T 形的“竖”
    ========================================================================== */
 .VPSidebar {
-  /* 去除默认边框 */
   border-right: none !important;
   border-top: none !important;
-
-  /* 确保 Sidebar 在 Navbar 下方 */
   z-index: 90 !important;
-
-  /* 紧贴 Navbar 底部 */
-  top: var(--vp-nav-height) !important;
+  top: calc(var(--vp-nav-height) + 1px) !important;
+  height: calc(100vh - var(--vp-nav-height) - 1px) !important;
   padding-top: 0 !important;
   margin-top: 0 !important;
   background-color: var(--vp-sidebar-bg-color) !important;
+  box-shadow: none !important;
 }
 
-/* 使用伪元素绘制侧边栏竖线 */
+.VPSidebar > .nav,
+.VPSidebar > .group {
+  border-top: none !important;
+  margin-top: 0 !important;
+}
+
 .VPSidebar::after {
   content: "";
   position: absolute;
@@ -61,10 +86,9 @@
   display: block;
 }
 
-/* 修复宽屏下的样式覆盖 */
 @media (min-width: 960px) {
   .VPSidebar {
-    top: var(--vp-nav-height) !important;
+    top: calc(var(--vp-nav-height) + 1px) !important;
     padding-top: 0 !important;
   }
 }

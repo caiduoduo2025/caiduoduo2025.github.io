@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer-when-downgrade">
     <title>下载页</title>
 </head>
 <body>
-    <p id="message">下载页</p>
+    <p id="message">正在准备下载...</p>
     <script>
         var version = "1.0";
         var params = new URLSearchParams(window.location.search);
@@ -14,8 +15,13 @@
         }
         var url = "https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-" + version + ".jar";
         document.getElementById("message").innerText = "正在下载版本 " + version + "...";
-        window.location.href = url;
+
+        // 使用 replace 而不是 href，这样用户点击后退按钮时不会又回到下载页
+        window.location.replace(url);
     </script>
+    <noscript>
+        <p>如果下载没有自动开始，请<a href="https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-1.0.jar">点击这里</a>。</p>
+    </noscript>
 </body>
 </html>
 

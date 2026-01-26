@@ -1,0 +1,71 @@
+:root {
+  --vp-sidebar-bg-color: #ffffff;
+  --vp-c-bg-alt: #ffffff;
+  --vp-nav-bg-color: #ffffff;
+}
+
+/* ==========================================================================
+   1. 顶部导航栏 (VPNav) - 负责 T 形的“横”
+   ========================================================================== */
+/* 将边框统一加在最外层的 VPNav 上，确保是一条完整的直线 */
+.VPNav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100 !important;
+  background-color: #ffffff !important;
+  backdrop-filter: none !important;
+  /* 唯一的底部横线 */
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+  box-shadow: none !important;
+}
+
+/* 移除子元素的边框，防止出现“双眼皮” */
+.VPNavBar {
+  border-bottom: none !important;
+  background-color: transparent !important;
+}
+.VPLocalNav {
+  border-bottom: none !important;
+  background-color: transparent !important;
+}
+
+/* ==========================================================================
+   2. 侧边栏 (Sidebar) - 负责 T 形的“竖”
+   ========================================================================== */
+.VPSidebar {
+  /* 去除默认边框 */
+  border-right: none !important;
+  border-top: none !important;
+
+  /* 确保 Sidebar 在 Navbar 下方 */
+  z-index: 90 !important;
+
+  /* 紧贴 Navbar 底部 */
+  top: var(--vp-nav-height) !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  background-color: var(--vp-sidebar-bg-color) !important;
+}
+
+/* 使用伪元素绘制侧边栏竖线 */
+.VPSidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--vp-c-divider);
+  display: block;
+}
+
+/* 修复宽屏下的样式覆盖 */
+@media (min-width: 960px) {
+  .VPSidebar {
+    top: var(--vp-nav-height) !important;
+    padding-top: 0 !important;
+  }
+}
+

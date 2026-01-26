@@ -1,0 +1,195 @@
+/* Custom styles for wealth theme */
+
+/* Large hero section */
+.hero-large {
+  padding: 4rem 2rem !important;
+  min-height: 80vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+/* Yellow wealth overlay */
+.hero-large::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.85) 0%, rgba(252, 211, 77, 0.75) 100%) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.hero-large > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.hero-large h1 {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+  color: #78350f !important;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5) !important;
+}
+
+.hero-large p {
+  font-size: 1.5rem !important;
+  margin-bottom: 2rem !important;
+  color: #78350f !important;
+  font-weight: 500 !important;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Large button styling */
+.hero-large .btn {
+  padding: 1.2rem 2.5rem !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  border-radius: 0.5rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.8rem !important;
+  background-color: #1e3a8a !important;
+  color: #fcd34d !important;
+  border: 2px solid #fcd34d !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  margin: 0.5rem !important;
+}
+
+.hero-large .btn:hover {
+  background-color: #1e40af !important;
+  color: #fef3c7 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3) !important;
+}
+
+/* Primary action button in yellow */
+.hero-large .btn-primary {
+  background-color: #1e3a8a !important;
+  color: #fcd34d !important;
+  border-color: #fcd34d !important;
+}
+
+.hero-large .btn-primary:hover {
+  background-color: #1e40af !important;
+  color: #fef3c7 !important;
+}
+
+/* Secondary action button - transparent with yellow border */
+.hero-large .btn-secondary {
+  background-color: transparent !important;
+  color: #78350f !important;
+  border: 2px solid #78350f !important;
+  border-radius: 0.5rem !important;
+  padding: 1.2rem 2.5rem !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+}
+
+.hero-large .btn-secondary:hover {
+  background-color: rgba(120, 53, 15, 0.1) !important;
+  color: #78350f !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px rgba(120, 53, 15, 0.2) !important;
+}
+
+/* Icon styling in button */
+.hero-large .btn svg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+/* Navigation bar alignment - Left aligned and compact */
+header nav {
+  display: flex !important;
+  justify-content: flex-start !important; /* Left align */
+}
+
+.navbar .container,
+.navbar .container-fluid {
+  justify-content: flex-start !important; /* Left align content */
+  max-width: 1200px !important; /* Match standard content width */
+  margin: 0 auto !important; /* Center the container itself */
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.navbar-brand {
+  margin-right: 1.5rem !important; /* Reduce space after logo */
+  margin-left: 0 !important;
+}
+
+.navbar-nav {
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem !important; /* Reduce space between menu items */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* On larger screens */
+@media (min-width: 992px) {
+  header nav .container,
+  header nav .container-fluid {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+}
+
+
+
+/* Footer customization - Keep only copyright notice */
+
+/* Hide first paragraph (Privacy and Terms) */
+footer p:nth-child(1) {
+  display: none !important;
+}
+
+/* Hide second paragraph (Creative Commons icons) */
+footer p.footer-license-icons {
+  display: none !important;
+}
+
+/* Hide last paragraph (Made with Hugo Blox Kit) */
+footer p:last-child {
+  display: none !important;
+}
+
+/* Keep the copyright paragraph visible */
+footer p.powered-by:not(.footer-license-icons) {
+  display: block !important;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-large {
+    padding: 3rem 1rem !important;
+    min-height: 60vh !important;
+  }
+
+  .hero-large h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-large p {
+    font-size: 1.1rem !important;
+  }
+
+  .hero-large .btn {
+    padding: 1rem 1.8rem !important;
+    font-size: 1.1rem !important;
+  }
+}
+

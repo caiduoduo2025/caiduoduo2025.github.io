@@ -1,0 +1,17 @@
+// Hide unwanted footer elements
+document.addEventListener('DOMContentLoaded', function() {
+  const footer = document.querySelector('footer');
+  if (footer) {
+    // Hide all paragraphs
+    const paragraphs = footer.querySelectorAll('p');
+    paragraphs.forEach((p, index) => {
+      // Keep only the copyright notice paragraph
+      if (p.textContent.includes('©') && p.textContent.includes('财多多')) {
+        p.style.display = 'block';
+      } else {
+        p.style.display = 'none';
+      }
+    });
+  }
+});
+

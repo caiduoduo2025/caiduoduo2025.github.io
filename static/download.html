@@ -2,13 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>下载中</title>
-    <meta http-equiv="refresh" content="0; url=https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-0.9.jar">
+    <title>下载页</title>
 </head>
 <body>
-    <p>下载中</p>
+    <p id="message">下载页</p>
     <script>
-        window.location.href = "https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-0.9.jar";
+        var version = "1.0";
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("v")) {
+            version = params.get("v");
+        }
+        var url = "https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-" + version + ".jar";
+        document.getElementById("message").innerText = "正在下载版本 " + version + "...";
+        window.location.href = url;
     </script>
 </body>
 </html>

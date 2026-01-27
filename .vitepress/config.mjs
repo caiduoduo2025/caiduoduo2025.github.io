@@ -21,7 +21,7 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: '首页', link: '/'},
-            {text: '文档', link: '/docs/get-started/', activeMatch: '/docs/'}
+            {text: '文档', link: '/docs/get-started', activeMatch: '/docs/'}
         ],
 
         sidebar: {
@@ -29,7 +29,8 @@ export default defineConfig({
                 {
                     text: '文档',
                     items: [
-                        {text: '快速入门', link: '/docs/get-started/'},
+                        {text: '快速入门', link: '/docs/get-started'}
+                        // {text: '价格更新配置', link: '/docs/price-update'},
                         // I will add more items here after migrating the docs
                     ]
                 }

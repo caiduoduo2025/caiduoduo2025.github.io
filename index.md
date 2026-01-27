@@ -9,6 +9,8 @@ hero:
     - theme: brand
       text: 立即下载
       link: https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-1.0.jar
+      target: _blank
+      rel: noopener
     - theme: alt
       text: 快速入门
       link: /docs/get-started/

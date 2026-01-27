@@ -12,6 +12,9 @@ export default defineConfig({
     // I will add a comment about this.
     base: '/',
     ignoreDeadLinks: true,
+    markdown: {
+        externalLinks: { target: '_blank', rel: 'noopener' }
+    },
 
     themeConfig: {
         logo: '/logo.png',

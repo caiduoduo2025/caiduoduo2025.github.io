@@ -11,7 +11,7 @@ export default defineConfig({
     // but for now leaving base as default '/' or user can configure it.
     // I will add a comment about this.
     base: '/',
-    ignoreDeadLinks: true,
+    // ignoreDeadLinks: true,
     markdown: {
         externalLinks: { target: '_blank', rel: 'noopener' }
     },

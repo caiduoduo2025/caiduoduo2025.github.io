@@ -11,6 +11,7 @@ export default defineConfig({
     // but for now leaving base as default '/' or user can configure it.
     // I will add a comment about this.
     base: '/',
+    ignoreDeadLinks: true,
 
     themeConfig: {
         logo: '/logo.png',

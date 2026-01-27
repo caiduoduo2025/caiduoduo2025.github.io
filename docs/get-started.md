@@ -20,9 +20,11 @@
 - **Intel 芯片**: [点击下载 Java 21 (x64 DMG)](https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg)
   > *如果不确定芯片类型，请点击屏幕左上角苹果图标 > "关于本机" 查看。*
 
-### Linux 用户
-- [点击前往 Oracle 官网下载页](https://www.oracle.com/java/technologies/downloads/#jdk21-linux)
+[//]: # (### Linux 用户)
 
+[//]: # (- [点击前往 Oracle 官网下载页]&#40;https://www.oracle.com/java/technologies/downloads/#jdk21-linux&#41;)
+
+[//]: # ()
 ### 验证安装
 
 安装完成后，请按照以下步骤验证：

@@ -35,15 +35,15 @@
 
 点击下方链接下载最新版本财多多软件：
 
-- [下载 cdd-1.0.jar](https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-1.0.jar)
+- [下载 cdd-1.1.jar](https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-1.1.jar)
 
 ## 3. 启动财多多软件
 
 1. **找到下载的文件**：
-   打开文件资源管理器，进入 **Downloads** 目录（通常文件会下载到这里），找到 `cdd-1.0.jar` 文件。
+   打开文件资源管理器，进入 **Downloads** 目录（通常文件会下载到这里），找到 `cdd-1.1.jar` 文件。
 
 2. **右键运行**：
-   鼠标右键点击 `cdd-1.0.jar` 文件，选择 **“打开方式”** -> **“Java(TM)”**。
+   鼠标右键点击 `cdd-1.1.jar` 文件，选择 **“打开方式”** -> **“Java(TM)”**。
 
    > *注意：如果没有看到 Java 选项，说明未成功安装 Java。*
 

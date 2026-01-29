@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 请用电脑下载
-      link: https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-1.0.jar
+      link: https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-1.1.jar
       target: _blank
       rel: noopener
     - theme: alt

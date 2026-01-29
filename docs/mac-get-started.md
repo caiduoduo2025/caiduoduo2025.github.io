@@ -37,7 +37,7 @@
 
 点击下方链接下载最新版本财多多软件：
 
-- [下载 cdd-1.0.jar](https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-1.0.jar)
+- [下载 cdd-1.1.jar](https://cdd-dl-1302109275.cos.ap-guangzhou.myqcloud.com/cdd-1.1.jar)
 
 ## 3. 启动财多多软件
 
@@ -48,7 +48,7 @@ cd Downloads
 
 然后输入以下命令并回车，启动财多多软件
 ```bash
-java -jar cdd-1.0.jar
+java -jar cdd-1.1.jar
 ```
 
 启动后，浏览器会自动打开 `http://localhost:8888`。

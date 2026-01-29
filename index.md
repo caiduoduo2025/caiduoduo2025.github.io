@@ -13,7 +13,7 @@ hero:
       rel: noopener
     - theme: alt
       text: 快速入门
-      link: /docs/get-started/
+      link: /docs/windows-get-started
 
 features:
   - title: 资产信息中心

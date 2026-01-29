@@ -1,37 +1,25 @@
-# 快速入门
+# 苹果电脑快速入门
 
 欢迎使用 **财多多** —— 你的智能投资理财管家。
 
-请在电脑上按照以下步骤快速开始使用：
+请在电脑上按照以下步骤快速开始使用，客服 **微信号**：`caiduoduokefu`：
 
 ## 1. Java 环境准备
 
 本软件依赖 Java 运行环境，请确保你的电脑已安装 **Java 21** 或更高版本。
 
-请根据你的电脑系统选择对应的安装包下载：
-
-### Windows 用户
-- **64位系统**: [点击下载 Java 21 (x64 Installer)](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)
-  > *注：Java 21 仅支持 64 位 Windows 系统。*
-
-### macOS 用户
+### 下载安装包
 请根据你的芯片类型选择：
 - **Apple 芯片 (M1/M2/M3等)**: [点击下载 Java 21 (ARM64 DMG)](https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg)
 - **Intel 芯片**: [点击下载 Java 21 (x64 DMG)](https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg)
   > *如果不确定芯片类型，请点击屏幕左上角苹果图标 > "关于本机" 查看。*
 
-[//]: # (### Linux 用户)
-
-[//]: # (- [点击前往 Oracle 官网下载页]&#40;https://www.oracle.com/java/technologies/downloads/#jdk21-linux&#41;)
-
-[//]: # ()
 ### 验证安装
 
 安装完成后，请按照以下步骤验证：
 
 1. **打开终端**：
-   - **Windows**: 按 `Win + R` 键，输入 `cmd` 并回车。
-   - **macOS**: 按 `Command + Space` 键，输入 `终端` (或 Terminal) 并回车。
+   按 `Command + Space` 键，输入 `终端` (或 Terminal) 并回车。
 
 2. **输入命令**：
    在终端窗口中输入以下命令并回车，检查 Java 版本：
@@ -43,8 +31,7 @@
    如果看到类似 `java version "21.0.x"` 显示，说明安装成功。
 
    > **Java 版本问题**：如果显示版本低于 21（如 1.8 或 11），软件将无法启动。请卸载旧版本：
-   > - **Windows**: 打开“设置” > “应用”，搜索 Java 并卸载旧版本。
-   > - **macOS**: 打开访达，按 `Cmd+Shift+G`，输入 `/Library/Java/JavaVirtualMachines`，删除旧版本文件夹。
+   > 打开访达，按 `Cmd+Shift+G`，输入 `/Library/Java/JavaVirtualMachines`，删除旧版本文件夹。
 
 ## 2. 下载财多多软件
 

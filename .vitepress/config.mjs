@@ -5,7 +5,19 @@ export default defineConfig({
     description: "你的智能投资理财管家",
     lang: 'zh-CN',
     appearance: false,
-    head: [['link', {rel: 'icon', href: '/favicon.svg'}]],
+    head: [
+        ['link', {rel: 'icon', href: '/favicon.svg'}],
+        ['meta', {name: 'keywords', content: '财多多, 投资理财, 投资软件, 理财软件, 投资组合管理, 智能建仓, 网格交易, 定投, 收益曲线, 收益分析, 个人财务系统, 仓位管理, 估值分析, 交易记录, 分红提醒'}],
+        ['meta', {name: 'baidu-site-verification', content: 'codeva-Xyq1w8BIBg'}],
+        ['meta', {property: 'og:title', content: '财多多 - 你的智能投资理财管家'}],
+        ['meta', {property: 'og:description', content: '你的智能投资理财管家'}],
+        ['meta', {property: 'og:image', content: 'https://cdd.fan/logo.png'}],
+        ['meta', {property: 'og:type', content: 'website'}],
+        ['meta', {property: 'og:url', content: 'https://cdd.fan/'}]
+    ],
+    sitemap: {
+        hostname: 'https://cdd.fan'
+    },
 
     // Assuming the site will be deployed to a subdirectory if needed,
     // but for now leaving base as default '/' or user can configure it.
